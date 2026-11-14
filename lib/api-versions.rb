@@ -16,7 +16,7 @@ module ApiVersions
     if api_namespace.blank?
       DSL.new(self, &block)
     else
-      namespace(api_namespace, options) { DSL.new(self, &block) }
+      namespace(api_namespace, **options) { DSL.new(self, &block) }
     end
   end
 end
